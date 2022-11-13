@@ -195,6 +195,8 @@ if [[ $+functions[_zsh_highlight] -eq 0 ]]; then
 fi
 
 _history-substring-search-begin() {
+  emulate -L zsh
+
   setopt localoptions extendedglob
 
   _history_substring_search_refresh_display=
